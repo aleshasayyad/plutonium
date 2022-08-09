@@ -1,3 +1,4 @@
+const { query } = require('express');
 const express = require('express');
 const abc = require('../introduction/intro')
 const router = express.Router();
@@ -94,6 +95,11 @@ router.get('/movies/:indexNumber', function (req, res){
             console.log(xyz)
             res.send(filmsName[xyz])
            }
+    })
+    router.get("/shoes",function(req,res){
+        let QueryParams=req.query
+        let brand=QueryParams.brand
+        res.send("dummy response")
     })
 
     
